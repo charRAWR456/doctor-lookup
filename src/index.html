@@ -5,6 +5,28 @@
     <title></title>
   </head>
   <body>
-    <h1>Doctor Lookup</h1>
+    <div class="container">
+
+  <div id="doctor-requested-info">
+    <div class="jumbotron">
+      <h1>Search for a Doctor</h1>
+    </div>
+    <form class="" id="doctor-criteria">
+
+      <label for="address">Enter your location:</label>
+      <input class="form-control" id="address" type="text" name="address">
+
+      <label for="medical-symptom">Enter your sympton:</label>
+      <input class="form-control" id="medical-symptom" type="text" name="medical-symptom">
+
+      <label for="doctor-name">Enter a doctors name (optional):</label>
+      <input class="form-control" id="doctor-name" type="text" name="doctor-name">
+      <br>
+      <button class="btn btn-info" type="submit" name="button" id="submit">Search</button>
+    </form>
+    <br>
+  </div>
+  <div id="doctor-results"></div>
+ </div>
   </body>
 </html>
