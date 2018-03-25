@@ -21,7 +21,7 @@ This webpage is designed for users to enter a medical issue they are experiencin
 2. Take in a doctors name
 3. Take in the users location
 4. Return a list of doctors matching the search requirements
-5. If no doctor matches search criteria the user will recieve a notification that states no doctors meet the criteria they have provided
+5. If no doctor matches search criteria the user will receive a notification that states no doctors meet the criteria they have provided
 6. If the API call results in an error the application will return a notification that states what the error is.
 
 ## Technologies Used
