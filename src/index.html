@@ -13,20 +13,24 @@
     </div>
     <form class="" id="doctor-criteria">
 
-      <label for="address">Enter your location:</label>
-      <input class="form-control" id="address" type="text" name="address">
+      <label for="address">Enter your location (in format of state-city):</label>
+      <input class="form-control" id="address" type="text" name="address" placeholder="wa-seattle">
 
       <label for="medical-symptom">Enter your sympton:</label>
       <input class="form-control" id="medical-symptom" type="text" name="medical-symptom">
 
-      <label for="doctor-name">Enter a doctors name (optional):</label>
+      <label for="doctor-name">Enter a doctors name:</label>
       <input class="form-control" id="doctor-name" type="text" name="doctor-name">
       <br>
       <button class="btn btn-info" type="submit" name="button" id="submit">Search</button>
     </form>
     <br>
   </div>
-  <div id="doctor-results"></div>
+  <div id="doctor-results">
+    <div class="jumbotron">
+      <h1>Doctor Results</h1>
+    </div>
+    <button class="btn btn-info"><a href="/">Change Search Criteria</a></button><br><br></div>
  </div>
   </body>
 </html>
