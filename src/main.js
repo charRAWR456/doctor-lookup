@@ -24,14 +24,14 @@ $(document).ready(function() {
 
       if (response.data.length === 0){
         console.log(response.data.length);
-        $('#doctor-results').append("No matches for your search criteria");
+        $('#doctor-results').append("No matches for your search criteria, please try again");
         $('#doctor-results').show();
         $('#doctor-requested-info').hide();
       }else{
         for(let i = 0; i < response.data.length; i++){
           for(let j = 0; j < response.data[i].specialties.length; j++){
             console.log(response.data.length);
-            $('#doctor-results').append(`<img src=${response.data[i].profile.image_url}>` +"<br><strong>Doctor Name: </strong>"+ response.data[i].profile.first_name + " " + response.data[i].profile.last_name + ", "+ response.data[i].profile.title + '<br><strong> Location: </strong>'+ response.data[i].practices[0].visit_address.street +", "+ response.data[i].practices[0].visit_address.city +", "+ response.data[i].practices[0].visit_address.state +'<br><strong> Specialty: </strong>' + response.data[i].specialties[j].name +'<br><strong> Bio: </strong>' + response.data[i].profile.bio + '<hr>')
+            $('#doctor-results').append(`<img src=${response.data[i].profile.image_url}>` +"<br><strong>Doctor Name: </strong>"+ response.data[i].profile.first_name + " " + response.data[i].profile.last_name + ", "+ response.data[i].profile.title + '<br><strong> Accepting New Patients? </strong>' + response.data[i].practices[0].accepts_new_patients + '<br><strong> Location: </strong>'+ response.data[i].practices[0].visit_address.street +", "+ response.data[i].practices[0].visit_address.city +", "+ response.data[i].practices[0].visit_address.state +'<br><strong> Specialty: </strong>' + response.data[i].specialties[j].name +'<br><strong> Phone Number: </strong>'+ response.data[i].practices[0].phones[0].number +'<br><strong> Website: </strong>' + response.data[i].practices[0].website + '<br><strong> Bio: </strong>' + response.data[i].profile.bio + '<hr>')
             $('#doctor-results').show();
             $('#doctor-requested-info').hide();
           }
